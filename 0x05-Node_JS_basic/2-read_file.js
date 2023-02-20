@@ -1,4 +1,5 @@
 const fs = require("fs");
+const { parse } = require("csv-parse");
 module.exports = function countStudents(){
   fs.createReadStream(arguments[0])
     .pipe(parse({ delimiter: ",", from_line: 2 }))
