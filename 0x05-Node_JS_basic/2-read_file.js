@@ -1,7 +1,11 @@
 const fs = require("fs");
 module.exports = function countStudents(){
-  fs.readFile(arguments[0], "utf-8", (err, data) => {
-    if (err) process.stdout.write("Cannot load the database");
-    else console.log(data.lenght);
+  fs.createReadStream(arguments[0])
+    .pipe(parse({ delimiter: ",", from_line: 2 }))
+    .on("data", function (row) {
+    console.log(row);
+  })
+    .on("error", function (error) {
+    process.stdout.write("Cannot load the database");
   });
 }
