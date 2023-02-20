@@ -3,7 +3,7 @@ module.exports = function displayMessage(){
     {
         if (typeof arguments[i] == 'string')
         {
-            process.stdout.write(arguments[i]);
+            process.stdout.write(`${arguments[i]}\n`);
         }
     }
 }
