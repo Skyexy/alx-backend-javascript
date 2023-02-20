@@ -1,12 +1,11 @@
 const fs = require("fs");
-const { parse } = require("csv-parse");
 module.exports = function countStudents(){
-  fs.createReadStream(arguments[0])
-    .pipe(parse({ delimiter: ",", from_line: 2 }))
-    .on("data", function (row) {
-    console.log(row);
+  var fs = require("fs");
+  var data = fs.readFileSync("your.csv").toLocaleString();
+  
+  var rows = data.split("\n");
+  rows.forEach((row) => {
+    columns = row.split(","); //SPLIT COLUMNS
+    console.log(columns);
   })
-    .on("error", function (error) {
-    process.stdout.write("Cannot load the database");
-  });
 }
