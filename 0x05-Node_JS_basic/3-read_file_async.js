@@ -2,7 +2,7 @@
   
 const fs = require('fs');
 
-function countStudents(path) {
+async function countStudents(path) {
   const promise = (res, rej) => {
     fs.readFile(path, (err, data) => {
       if (err) rej(Error('Cannot load the database'));
