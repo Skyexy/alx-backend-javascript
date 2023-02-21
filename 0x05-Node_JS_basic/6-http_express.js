@@ -1,9 +1,10 @@
-var express = require('express');
-var app = express();
+const express = require('express');
 
-app.get('/', function (req, res) {
-   res.end('Hello Holberton School!');
-})
+const app = express();
+
+app.get('/', (req, res) => {
+  res.send('Hello Holberton School!');
+});
 
 app.listen(1245);
 module.exports = app;
