@@ -1,7 +1,7 @@
-module.exports = {
-  calculateNumber: (a, b) => {
-    a = Math.round(a);
-    b = Math.round(b);
-    return a + b;
-  }
+function calculateNumber(a, b) {
+  a = Math.round(a);
+  b = Math.round(b);
+  return a + b;
 }
+
+module.exports = calculateNumber
