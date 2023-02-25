@@ -4,4 +4,4 @@ function getPaymentTokenFromAPI(success){
   }
 }
 
-return getPaymentTokenFromAPI;
+module.exports = getPaymentTokenFromAPI;
