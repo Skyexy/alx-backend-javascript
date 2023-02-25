@@ -1,4 +1,4 @@
-module.exports = Utils {
+module.exports = class Utils {
   calculateNumber(type, a, b) {
     a = Math.round(a);
     b = Math.round(b);
