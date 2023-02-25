@@ -9,8 +9,8 @@ describe("utils", function() {
       var Spy = sinon.spy(Utils.calculateNumber);
       sendPaymentRequestToApi(100, 20);
       sinon.assert.calledOnce(Spy);
-      var args = Spy.getCalls()[0].args
-       assert.equal(args, 'SUM')
-    }
-  }
-}
+      var args = Spy.getCalls()[0].args;
+       assert.equal(args, 'SUM');
+    });
+  });
+});
