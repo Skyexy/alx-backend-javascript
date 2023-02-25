@@ -20,7 +20,7 @@ describe('Connection', function () {
     expect(consolepy.CalledOnce);
   });
   it('should call 20', () => {
-    sendPaymentRequestToApi(10, 20);
+    sendPaymentRequestToApi(10, 10);
     
     expect(consolepy.calledWithExactly('The total is: 20'));
     expect(consolepy.CalledOnce);
