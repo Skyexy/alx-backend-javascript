@@ -5,12 +5,13 @@ const chai = require("chai");
 const expect = chai.expect;
 
 describe("utils", function() {
-  describe("clculatenum", function(){
     it('should call save once', function() {
-      var Spy = sinon.spy(Utils.calculateNumber);
-      sendPaymentRequestToApi(100, 20);
-      expect(Spy.calledOnce).to.be.true;
-      expect(res.send.firstCall.args[0]).to.equal('SUM');
+      const funcspy = sinon.spy(utils, 'calculateNumber');
+      const reqApi = sendPaymentRequestToApi(100, 20);
+      
+      expect(funcspy.calledOnceWithExactly('SUM', 100, 20)).to.equal(true);
+      expect(utils.calculateNumber('SUM', 100, 20)).to.equal(reqApi);
+      
+      funcspy.restore();
     });
-  });
 });
