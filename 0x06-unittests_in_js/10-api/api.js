@@ -21,7 +21,7 @@ app.get('/available_payments', (rq, rs) => {
       paypal: false
     }
   }
-  rs.json(ob);
+  rs.json(obj);
 });
 
 app.post('/login', (rq, rs) => {
