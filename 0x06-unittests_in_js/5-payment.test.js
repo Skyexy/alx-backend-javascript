@@ -5,24 +5,24 @@ const chai = require("chai");
 const expect = chai.expect;
 
 describe('Connection', function () {
-  let console;
+  let consolepy;
   
   beforeEach(() => {
-    console = sinon.spy(console, 'log');
+    consolepy = sinon.spy(console, 'log');
   });
   afterEach(() => {
-    console.restore();
+    consolepy.restore();
   });
   it('should call 120', () => {
     sendPaymentRequestToApi(100, 20);
     
-    expect(console.calledWithExactly('The total is: 120'));
-    expect(consolespy.CalledOnce);
+    expect(consolepy.calledWithExactly('The total is: 120'));
+    expect(consolepy.CalledOnce);
   });
   it('should call 20', () => {
     sendPaymentRequestToApi(10, 20);
     
-    expect(console.calledWithExactly('The total is: 20'));
-    expect(consolespy.CalledOnce);
+    expect(consolepy.calledWithExactly('The total is: 20'));
+    expect(consolepy.CalledOnce);
   });
 });
