@@ -1,4 +1,4 @@
-module.exports = const Utils {
+const Utils = {
   calculateNumber(type, a, b) {
     a = Math.round(a);
     b = Math.round(b);
@@ -19,3 +19,5 @@ module.exports = const Utils {
     return solution;
   }
 }
+
+module.exports = Utils
